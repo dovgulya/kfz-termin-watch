@@ -6,7 +6,7 @@
 
 Переменные окружения:
   NTFY_TOPIC   — секретное имя канала ntfy (обязательно)
-  TARGET_LAST  — последняя интересная дата, по умолчанию 2026-11-27
+  TARGET_LAST  — последняя интересная дата, по умолчанию 2026-11-23
   PRIORITY_DAY — день, который выделять, по умолчанию 2026-11-20 (пятница)
   STATE_FILE   — файл для антиспама, по умолчанию state/last.txt
   TEST_NOTIFY  — "1": отправить тестовый пуш с текущей картиной и выйти
@@ -33,7 +33,7 @@ WD = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
 WD_FULL = ["ПОНЕДЕЛЬНИК", "ВТОРНИК", "СРЕДА", "ЧЕТВЕРГ", "ПЯТНИЦА", "СУББОТА", "ВОСКРЕСЕНЬЕ"]
 
 TOPIC = os.environ.get("NTFY_TOPIC", "").strip()
-TARGET_LAST = dt.date.fromisoformat(os.environ.get("TARGET_LAST", "2026-11-27"))
+TARGET_LAST = dt.date.fromisoformat(os.environ.get("TARGET_LAST", "2026-11-23"))
 PRIORITY_DAY = dt.date.fromisoformat(os.environ.get("PRIORITY_DAY", "2026-11-20"))
 STATE_FILE = os.environ.get("STATE_FILE", "state/last.txt")
 TEST = os.environ.get("TEST_NOTIFY") == "1"
