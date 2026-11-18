@@ -31,7 +31,7 @@ jobs:
       - name: Check slots
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-          TARGET_LAST: "2026-11-27"
+          TARGET_LAST: "2026-11-23"
           PRIORITY_DAY: "2026-11-20"
           TEST_NOTIFY: ${{ github.event_name == 'workflow_dispatch' && inputs.test && '1' || '0' }}
         run: python3 check.py
